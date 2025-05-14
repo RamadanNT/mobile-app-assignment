@@ -1,0 +1,17 @@
+open class Person(val name: String, val age: Int) {
+    fun showPerson() {
+        println("Name: $name, Age: $age")
+    }
+}
+
+class Student(name: String, age: Int, val grade: String) : Person(name, age) {
+    fun showStudent() {
+        showPerson()
+        println("Grade: $grade")
+    }
+}
+
+fun main() {
+    val student = Student("Amina", 20, "A")
+    student.showStudent()
+}
